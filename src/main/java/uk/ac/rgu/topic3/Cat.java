@@ -12,7 +12,7 @@ public class Cat extends Animal {
     public Cat(String name) {
         super(name);
     }
-
+    
     /**
      * The @Override tag tells the compiler that this method overrides one of the same name in the base class
      * This is used even when the method in the base class is abstract
