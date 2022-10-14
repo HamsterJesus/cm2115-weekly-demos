@@ -25,7 +25,7 @@ public class App {
 
         Cat cat = new Cat("Felix");
         Dog dog = new Dog("Fido");
-        //Hams
+        
 
         /**
          * Polymorphism allows us to use a sub-class in place of a super class (i.e., the class that is extended)
