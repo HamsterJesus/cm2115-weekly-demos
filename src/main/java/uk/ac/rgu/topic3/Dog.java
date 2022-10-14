@@ -13,5 +13,9 @@ public class Dog extends Animal {
     public String makeSound() {
         return this.name + ": woof";
     }
+
+    public String epic(){
+        return "! this animal is slightly less epic :)";
+    }
     
 }

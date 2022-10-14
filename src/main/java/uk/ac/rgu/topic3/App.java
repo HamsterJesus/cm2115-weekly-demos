@@ -25,7 +25,7 @@ public class App {
 
         Cat cat = new Cat("Felix");
         Dog dog = new Dog("Fido");
-        
+        Hamster hamster = new Hamster("Flarb");
 
         /**
          * Polymorphism allows us to use a sub-class in place of a super class (i.e., the class that is extended)
@@ -34,7 +34,7 @@ public class App {
          */
         acceptAnimal(cat);
         acceptAnimal(dog);
-        //acceptAnimal(hammy);
+        acceptAnimal(hamster);
 
         /**
          * Polymorphism also allows us to assign variables declared as a super class (so in this case Animal) to
@@ -47,9 +47,10 @@ public class App {
          * The main use of polymorphism in this way is to be able to store multiple related objects
          * in a single array
          */
-         Animal[] animals = new Animal[2];
+         Animal[] animals = new Animal[3];
          animals[0] = new Cat("Crookshanks");
          animals[1] = new Dog("Gnasher");
+         animals[2] = new Hamster("Hammy J");
 
          /* However, as also explained in the acceptAnimal() method below, we lose the ability to call
           * methods only defined in the sub-class, i.e.
@@ -58,8 +59,9 @@ public class App {
             We can only call methods declared in the Animal class
           */
 
-          System.out.println(animals[0].makeSound());
-          System.out.println(animals[1].makeSound());
+          System.out.println(animals[0].makeSound() + animals[0].epic());
+          System.out.println(animals[1].makeSound() + animals[1].epic());
+          System.out.println(animals[2].makeSound() + animals[2].epic());
 
     }
 
@@ -70,6 +72,7 @@ public class App {
          * Animal we're getting - it could be a Cat, Dog, or someone we've not even seen yet
          */
         animal.makeSound();
+        animal.epic();
 
     }
 

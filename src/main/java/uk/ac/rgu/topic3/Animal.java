@@ -35,6 +35,10 @@ public abstract class Animal {
      */
     public abstract String makeSound();
 
+    public String epic(){
+        return "! this animal is epic :)";
+    }
+
 
 
 }
