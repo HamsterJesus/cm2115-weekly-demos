@@ -27,6 +27,20 @@ public class App {
         Dog dog = new Dog("Fido");
         Hamster hamster = new Hamster("Flarb");
 
+
+        CanFly[] flyingThings = new CanFly[3];
+        flyingThings[0] = new Eagle("Murray");
+        flyingThings[1] = new Pegasus("Flarb");
+        flyingThings[2] = new Plane();
+
+        for(int i=0;i<flyingThings.length;i++){
+            System.out.println(flyingThings[i].getFlyingDistance());
+        }
+        
+        //acceptFlying(eagle);
+
+
+
         /**
          * Polymorphism allows us to use a sub-class in place of a super class (i.e., the class that is extended)
          * So in this case, because the Cat and Dog classes both extend Animal, we can provide a Cat or Dog object
@@ -74,6 +88,10 @@ public class App {
         animal.makeSound();
         animal.epic();
 
+    }
+
+    public static void acceptFlying(CanFly thing){
+        thing.fly();
     }
 
 }
